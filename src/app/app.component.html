@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="alert alert-danger mt-2" *ngIf="showError">
+    {{ message }}
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="labseqLabel">Labseq value</label>
+        <input type="number" [(ngModel)]="inputValue" class="form-control" id="labseqLabel" placeholder="Insert a number">
+        <div class="text-center">
+          <button class="btn btn-success mt-2 btnSize"  (click)="getValueLabSeqOnClick()">Get value</button>
+          <br>
+          <span *ngIf="showResult">Result: {{valueNumber}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+  </div>
+</div>
